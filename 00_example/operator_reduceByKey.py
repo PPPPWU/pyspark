@@ -7,3 +7,4 @@ if __name__ == '__main__':
     rdd = sc.parallelize([('a', 1), ('b', 2), ('a', 1),('a', 1), ('b', 2), ('a', 1)])
     result = rdd.reduceByKey(lambda  a, b : a+b)
     print(result.collect())
+    # [('a', 4), ('b', 4)]
